@@ -1,0 +1,45 @@
+<view class="gardBox">
+  <van-grid
+    column-num="3"
+    square
+    border="{{false}}"
+  >
+    <van-grid-item
+      icon-color="{{active === 1 ? '#ff6600' : '#ccc'}}"
+      icon="live"
+      text="抖音去水印"
+      data-type="{{1}}"
+      bind:click="handleActive"
+      text-class="itemText {{active === 1 ? 'active' : ''}}"
+    />
+    <van-grid-item
+      icon-color="{{active === 2 ? '#cc1199' : '#ccc'}}"
+      icon="video"
+      text="视频解析"
+      data-type="{{2}}"
+      bind:click="handleActive"
+      text-class="itemText {{active === 2 ? 'active' : ''}}"
+    />
+    <van-grid-item
+      icon-color="{{active === 3 ? '#006699' : '#ccc'}}"
+      icon="audio"
+      text="音乐解析"
+      data-type="{{3}}"
+      bind:click="handleActive"
+      text-class="itemText {{active === 3 ? 'active' : ''}}"
+    />
+  </van-grid>
+</view>
+<view class="inputBox">
+  <van-cell-group>
+    <van-field
+      value="{{ message }}"
+      label="解析内容"
+      type="textarea"
+      placeholder="请输入要解析的内容"
+      autosize
+      size="large"
+    />
+  </van-cell-group>
+</view>
+

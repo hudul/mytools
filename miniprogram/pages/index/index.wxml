@@ -1,0 +1,16 @@
+<view class="pageBox">
+  <van-tabs
+    active="{{ active }}"
+    bind:change="onChange"
+    border="{{false}}"
+    line-width="{{100}}"
+    line-height="{{3}}"
+  >
+    <van-tab title="首页"></van-tab>
+    <van-tab title="功能">
+      <Features></Features>
+    </van-tab>
+    <van-tab title="关于我们"></van-tab>
+  </van-tabs>
+</view>
+
